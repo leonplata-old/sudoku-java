@@ -1,8 +1,8 @@
 import java.io.Serializable;
 
 /**
- * Representa la caja que contiene las casillas con los números concurrentes definidos
- * por el límite y realiza operaciones dirigidas solo a estos.
+ * Representa la caja que contiene las casillas con los nÃºmeros concurrentes definidos
+ * por el lÃ­mite y realiza operaciones dirigidas solo a estos.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
  * @version 2011.03.30
@@ -43,7 +43,7 @@ public class CajaSudoku implements Serializable {
 
     /**
      * Introduce una matriz de casillas y hace una copia por valor de ella.
-     * Para ello usa los métodos de 'CasillaSudoku'.
+     * Para ello usa los mÃ©todos de 'CasillaSudoku'.
      * @param casilla
      */
     public void setMatriz(CasillaSudoku[][] casilla) {
@@ -55,7 +55,7 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Setea los numero de la caja sudoku a través de la fila y columna en la que se
+     * Setea los numero de la caja sudoku a travÃ©s de la fila y columna en la que se
      * encuetra.
      * @param fil Fila del numero.
      * @param col Columna del numero.
@@ -68,11 +68,11 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Devuelve un numero de la caja Sudoku a través de la fila y columna en la que se
+     * Devuelve un numero de la caja Sudoku a travÃ©s de la fila y columna en la que se
      * encuentra.
      * @param fil La fila.
      * @param col La columna.
-     * @return El número en la fila y columna dada, si la fila o columna no existen
+     * @return El nï¿½mero en la fila y columna dada, si la fila o columna no existen
      * devuelve -1.
      */
     public int getNumero(int fil, int col) {
@@ -85,7 +85,7 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Controla que la fila y la columna estén dentro del rango de la matriz.
+     * Controla que la fila y la columna estÃ¡n dentro del rango de la matriz.
      * @param fil La fila.
      * @param col La columna.
      */
@@ -101,10 +101,10 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Verifica si existe el número en determinada fila.
+     * Verifica si existe el nÃºmero en determinada fila.
      * @param pos La posicion de la fila.
      * @param num El numero a ser buscado.
-     * @return true si el número es encontrado.
+     * @return true si el nÃºmero es encontrado.
      */
     public boolean verificarFila(int pos, int num) {
         boolean res = false;
@@ -119,10 +119,10 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Verifica si existe el número en determinada columna.
+     * Verifica si existe el nÃºmero en determinada columna.
      * @param pos La posicion de la columna.
      * @param num El numero a ser buscado.
-     * @return true si el número es encontrado.
+     * @return true si el nÃºmero es encontrado.
      */
     public boolean verificarColumna(int pos, int num) {
         boolean res = false;
@@ -137,9 +137,9 @@ public class CajaSudoku implements Serializable {
     }
 
     /**
-     * Verifica si existe el número en la caja.
+     * Verifica si existe el nÃºmero en la caja.
      * @param num El numero a ser buscado.
-     * @return true si el número es encontrado.
+     * @return true si el nÃºmero es encontrado.
      */
     public boolean verificarCaja(int num) {
         boolean res = false;
@@ -195,7 +195,7 @@ public class CajaSudoku implements Serializable {
 
     /*
      * Establece el estado de las casillas a false (desbloqueado), al generarse un
-     * Sudoku e insertar los números, estos solo se situarán en las casillas bloqueadas
+     * Sudoku e insertar los nÃºmeros, estos solo se situaron en las casillas bloqueadas
      * ignorando a las desbloqueadas.
      */
     private void esconder() {

@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Muestra la ventana 'Acerca de' en la cual se puede ver una presentaciÛn
+ * Muestra la ventana 'Acerca de' en la cual se puede ver una presentaci√≥n
  * con los nombres de los programadores.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
@@ -13,7 +13,7 @@ public class DialogoAcercaDe extends JWindow implements ActionListener {
 
     private JButton splash;
 
-    /** Construye la ventana de di·logo.*/
+    /** Construye la ventana de di√°logo.*/
     public DialogoAcercaDe() {
         splash = new  JButton(Utiles.createImageIcon("images/SudokuAcercaDe.png"));
         splash.setMargin            (null);
@@ -28,7 +28,7 @@ public class DialogoAcercaDe extends JWindow implements ActionListener {
         setAlwaysOnTop        (true);
     }
 
-    /** Cierra la ventana de di·logo.*/
+    /** Cierra la ventana de di√°logo.*/
     @Override
     public void actionPerformed(ActionEvent evt) {
         setVisible (false);

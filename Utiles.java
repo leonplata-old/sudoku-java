@@ -3,7 +3,7 @@ import javax.swing.ImageIcon;
 import java.util.Calendar;
 
 /**
- * Clase (Static Factory) que contiene mÈtodos de utilidad variada.
+ * Clase (Static Factory) que contiene m√©todos de utilidad variada.
  * @author Guillermo L. Plata Camacho,
  *         J. Gustavo Cossio Crispin,
  *         The Java Tutorials.
@@ -11,9 +11,9 @@ import java.util.Calendar;
  */
 public abstract class Utiles {
     /**
-     * Identifica la estensiÛn de un archivo.
-     * @param f El archivo a obtener su extensiÛn.
-     * @return La extensiÛn del archivo
+     * Identifica la extensi√≥n de un archivo.
+     * @param f El archivo a obtener su extensi√≥n.
+     * @return La extensi√≥n del archivo
      */
     public static String getExtension(File f) {
         String ext = null;
@@ -28,8 +28,8 @@ public abstract class Utiles {
     }
 
     /**
-     * Crea un objeto de im·gen.
-     * @param path La direcciÛn de la imagen.
+     * Crea un objeto de im√°gen.
+     * @param path La direcci√≥n de la imagen.
      * @return La imagen en objeto.
      */
     protected static ImageIcon createImageIcon(String path) {
@@ -37,13 +37,13 @@ public abstract class Utiles {
         if (imgURL != null) {
             return new ImageIcon(imgURL);
         } else {
-            System.err.println("No se encontrÛ el archivo: " + path);
+            System.err.println("No se encontr√≥ el archivo: " + path);
             return null;
         }
     }
 
     /**
-     * Devuelve la fecha actu·l en el computador en el que corre el programa.
+     * Devuelve la fecha actual en el computador en el que corre el programa.
      * @return La fecha representada por un entero.
      */
     public static String getFecha() {

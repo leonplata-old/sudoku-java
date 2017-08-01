@@ -7,8 +7,8 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 
 /**
- * La ventana de di·logo DialogoDificultad permite establecer las caractrÌsticas que
- * tendr· el Sudoku a ser generado.
+ * La ventana de dilogo DialogoDificultad permite establecer las caractr√≠sticas que
+ * tendrÔøΩ el Sudoku a ser generado.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
  * @version 2011.04.02
@@ -17,12 +17,12 @@ public class DialogoDificultad extends JDialog {
 
     /** Los limites predefinidos.*/
     public static String[] LIMITES_DISP = {"2 X 2", "3 X 3", "4 X 4", "5 X 5"};
-    /** Constante para identificar a la acciÛn de Aceptar.*/
+    /** Constante para identificar a la acci√≥n de Aceptar.*/
     public static String   ACEPTAR      = "1";
-    /** Constante para identificar a la acciÛn de Cancelar.*/
+    /** Constante para identificar a la acci√≥n de Cancelar.*/
     public static String   CANCELAR     = "0";
 
-    // Componentes de la ventana de di·logo.
+    // Componentes de la ventana de diÔøΩlogo.
     private ButtonGroup  GrupoDificultad;
     private JButton      buttonAceptar;
     private JButton      buttonCancelar;
@@ -41,10 +41,10 @@ public class DialogoDificultad extends JDialog {
     private String[]  formulario;
 
     /**
-     * Crea la ventana de di·logo con su respectivo poseedor(owner) y formulario
+     * Crea la ventana de di√°logo con su respectivo poseedor(owner) y formulario
      * a ser llenado.
-     * @param owner El frame que poseer· al dialogo.
-     * @param formulario La referencias a ser instanciadas, con la notaciÛn:
+     * @param owner El frame que poseer√° al dialogo.
+     * @param formulario La referencias a ser instanciadas, con la notaci√≥n:
      * {limite, dificultad, nombre de jugador, estado(Aceptar/Cancelar)}.
      */
     public DialogoDificultad(Frame owner, String[] formulario) {
@@ -62,7 +62,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Instancia y dota de car·cteristicas a los componentes de la ventana de di·logo.
+     * Instancia y dota de caracter√≠sticas a los componentes de la ventana de di√°logo.
      */
     private void iniciarComponentes() {
         GrupoDificultad = new ButtonGroup();
@@ -129,7 +129,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * AlineaciÛn generada con NetBeans.
+     * Alineaci√≥n generada con NetBeans.
      */
     private void alinearComponentes() {
         GroupLayout layout = new GroupLayout(getContentPane());
@@ -196,7 +196,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Cierra la ventana de di·logo.
+     * Cierra la ventana de di√°logo.
      */
     private void cerrarDialogo() {
         setVisible (false);
@@ -204,7 +204,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Permite elejÌr entre los lÌmites predefinidos.
+     * Permite elejir entre los l√≠mites predefinidos.
      */
     class LimiteComboBoxListener implements ActionListener {
         @Override
@@ -216,7 +216,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Desactiva los lÌmites predefinidos y activar el modo personalizado.
+     * Desactiva los l√≠mites predefinidos y activar el modo personalizado.
      */
     class PersonalizadoCheckBoxListener implements ItemListener {
         @Override
@@ -236,7 +236,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Llena el formulario, introduce la constante Aceptar y cierra la ventana de di·logo.
+     * Llena el formulario, introduce la constante Aceptar y cierra la ventana de di√°logo.
      */
     class LlenarFormularioListener implements ActionListener {
         @Override
@@ -251,7 +251,7 @@ public class DialogoDificultad extends JDialog {
     }
 
     /**
-     * Accede al mÈtodo para cerrar la ventana de di·logo.
+     * Accede al m√©todo para cerrar la ventana de di√°logo.
      */
     class CancelarListener implements ActionListener {
         @Override

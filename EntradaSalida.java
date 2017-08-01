@@ -1,14 +1,14 @@
 import java.io.*;
 
 /**
- * Clase (Static Factory) que contiene mÈtodos para abrir y guardar objetos en archivos.
+ * Clase (Static Factory) que contiene m√©todos para abrir y guardar objetos en archivos.
  * @author Guillermo L. Plata Camacho,
  *         J. Gustavo Cossio Crispin,
  *         The Java Tutorials.
  * @version 2011.04.02
  */
 public abstract class EntradaSalida {
-    /** Guarda un objeto en una direcciÛn especificada.*/
+    /** Guarda un objeto en una direcci√≥n especificada.*/
     public static void guardar(Object obj, String path)
     throws IOException {
         FileOutputStream   fos = new FileOutputStream(path);
@@ -31,7 +31,7 @@ public abstract class EntradaSalida {
         return objeto;
     }
 
-    /** Guarda una cadena de car·ceters en un formato legible.*/
+    /** Guarda una cadena de car√°ceters en un formato legible.*/
     public static void imprimir(String texto, String direccion)
     throws IOException {
         String[] c = texto.split("\n");

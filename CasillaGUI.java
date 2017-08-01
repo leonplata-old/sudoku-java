@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 
 /**
- * La representaciÛn gr·fica de una casilla de Sudoku.
+ * La representaci√≥n gr√°fica de una casilla de Sudoku.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
  * @version 2011.04.02
@@ -28,8 +28,8 @@ public class CasillaGUI extends JTextField {
     private boolean bloqueado;
 
     /**
-     * Contruye La casilla dotandole de una posiciÛn.
-     * @param posicion Establece la posiciÛn en la cu·l se encuentra la casilla
+     * Contruye La casilla dotandole de una posici√≥n.
+     * @param posicion Establece la posici√≥n en la cual se encuentra la casilla
      * dentro del Sudoku.
      */
     public CasillaGUI(int[] posicion) {
@@ -46,8 +46,8 @@ public class CasillaGUI extends JTextField {
     }
 
     /**
-     * Inicia la casilla estableciendo las caracterÌsticas de la casilla del modelo,
-     * si la casilla es jugable (est· desbloqueada) se agrega un MouseListener para
+     * Inicia la casilla estableciendo las caracter√≠sticas de la casilla del modelo,
+     * si la casilla es jugable (est√° desbloqueada) se agrega un MouseListener para
      * interactuar con esta.
      * @param c la casilla del modelo en la cual basar el estado y valor.
      * @param casillaListener el MouseListener para la casilla.
@@ -65,7 +65,7 @@ public class CasillaGUI extends JTextField {
     }
 
     /**
-     * @return true si la casilla est· bloqueada, false si la casilla no est·
+     * @return true si la casilla est√° bloqueada, false si la casilla no est√°
      * bloqueada.
      */
     public boolean estaBloqueado() {
@@ -85,15 +85,15 @@ public class CasillaGUI extends JTextField {
     }
 
     /**
-     * @return true si la casilla est· vacia, false si la casilla est· llena.
+     * @return true si la casilla est√° vacia, false si la casilla est√° llena.
      */
     public boolean estaVacia() {
         return getText() == "";
     }
 
     /**
-     * Muestra un n˙mero en la casilla, si el numero es 0 la casilla no muestra nada.
-     * @param numero el n˙mero a ser mostrado.
+     * Muestra un n√∫mero en la casilla, si el numero es 0 la casilla no muestra nada.
+     * @param numero el n√∫mero a ser mostrado.
      */
     public void setNumero(int numero) {
         if (numero == 0) {
@@ -105,8 +105,8 @@ public class CasillaGUI extends JTextField {
     }
 
     /**
-     * Devuelve el valor de la casilla, si la casilla est· vacÌa devuelve 0.
-     * @return El valor de la casilla, 0 si la casilla est· vacÌa.
+     * Devuelve el valor de la casilla, si la casilla est√° vac√≠a devuelve 0.
+     * @return El valor de la casilla, 0 si la casilla est√° vac√≠a.
      */
     public int getNumero() {
         int numero = 0;
@@ -118,8 +118,8 @@ public class CasillaGUI extends JTextField {
     }
 
     /**
-     * Devuelve la posiciÛn de la casilla en el Sudoku.
-     * @return La posiciÛn con la notaciÛn: {filaCaja, columnaCaja, fila, columna}.
+     * Devuelve la posici√≥n de la casilla en el Sudoku.
+     * @return La posici√≥n con la notaci√≥n: {filaCaja, columnaCaja, fila, columna}.
      */
     public int[] getPosicion() {
         return posicion;

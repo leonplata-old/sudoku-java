@@ -5,23 +5,23 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * La ventana de di·logo SelectNumero permite elegir entre los n˙meros disponibles
- * seg˙n la longitud del Sudoku.
+ * La ventana de di√°logo SelectNumero permite elegir entre los n√∫meros disponibles
+ * seg√∫n la longitud del Sudoku.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
  * @version 2011.04.02
  */
 public class SelectNumero extends JDialog implements ActionListener {
 
-    /** Establece como 0 todos los m·rgenes del componente. */
+    /** Establece como 0 todos los m√°rgenes del componente. */
     public static Insets SIN_MARGEN = new Insets(0, 0, 0, 0);
 
     private int[] formulario;
 
     /**
-     * Crea un dialogo sin las caracterÌsticas de una ventana con su respectivo
-     * poseedor(owner), posiciÛn, cantidad de botones y el formulario a ser llenado.
-     * @param owner El frame que poseer· al dialogo.
+     * Crea un dialogo sin las caracter√≠sticas de una ventana con su respectivo
+     * poseedor(owner), posici√≥n, cantidad de botones y el formulario a ser llenado.
+     * @param owner El frame que poseer√° al dialogo.
      * @param activo El componente al cual alinearse en el centro.
      * @param limite La cantidad de botones en base al calculo de su cuadrado.
      * @param formulario La referencia del entero a ser instanciado.
@@ -49,9 +49,9 @@ public class SelectNumero extends JDialog implements ActionListener {
     }
 
     /**
-     * Establece caracterÌsticas y adiere el ActionListener a un botÛn.
+     * Establece caracter√≠sticas y adiere el ActionListener a un bot√≥n.
      * @param boton El JButton a ser tratado.
-     * @param num el n˙mero a establecer como ActionCommand en el JButton.
+     * @param num el n√∫mero a establecer como ActionCommand en el JButton.
      */
     private void iniciarBoton(JButton boton, int num) {
         boton.setActionCommand  ("" + num);
@@ -63,7 +63,7 @@ public class SelectNumero extends JDialog implements ActionListener {
     }
 
     /**
-     * Cierra la ventana de di·logo.
+     * Cierra la ventana de di√°logo.
      */
     private void cerrarDialogo() {
         setVisible (false);
@@ -71,8 +71,8 @@ public class SelectNumero extends JDialog implements ActionListener {
     }
 
     /**
-     * Actualiza el formulario con el ActionCommand del botÛn presionado
-     * y finaliza la ventana de di·logo.
+     * Actualiza el formulario con el ActionCommand del bot√≥n presionado
+     * y finaliza la ventana de di√°logo.
      */
     @Override
     public void actionPerformed(ActionEvent evt) {

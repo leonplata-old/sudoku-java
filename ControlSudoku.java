@@ -6,14 +6,14 @@ import java.io.File;
 /**
  * El control del Sudoku, define la forma de jugar, los Listeners y atrapa las
  * Excepciones.
- * Puede trabajar con interface gráfica o en consola según el constructor que se use.
+ * Puede trabajar con interface grÃ¡fica o en consola segÃºn el constructor que se use.
  * @author Guillermo L. Plata Camacho.
  *         J. Gustavo Cossio Crispin,
  * @version 2011.04.02
  */
 public class ControlSudoku {
 
-    /** Define en milisegundos la duración de un segundo*/
+    /** Define en milisegundos la duraciÃ³n de un segundo*/
     public final static int SEGUNDO = 1000;
 
     // El modelo y la vista.
@@ -26,7 +26,7 @@ public class ControlSudoku {
     private Reloj         relojGUI;
 
     /**
-     * Constructor que arranca el juego sin interfaz gráfica.
+     * Constructor que arranca el juego sin interfaz grÃ¡fica.
      * @param modelo La estructura de datos del Sudoku.
      */
     public ControlSudoku(ListaCajaSudoku modelo) {
@@ -35,7 +35,7 @@ public class ControlSudoku {
     }
 
     /**
-     * Constructor que arranca el juego con interfaz gráfica.
+     * Constructor que arranca el juego con interfaz grÃ¡fica.
      * @param modelo La estructura de datos del Sudoku.
      * @param vista La interface que representa al modelo.
      */
@@ -80,9 +80,9 @@ public class ControlSudoku {
      * Inicia un nuevo juego setenado el nombre del jugador, el numero de casillas y
      * el nivel.
      * Cada vez que se inicia un nuevo juego se genera un archivo de texto que contiene
-     * el juego a resolver en la misma ruta que se encuentra el proyecto ó el binario.
+     * el juego a resolver en la misma ruta que se encuentra el proyecto Ã³ el binario.
      * @param jugador El nombre del jugador.
-     * @param limite El número de casillas por lado de caja.
+     * @param limite El nÃºmero de casillas por lado de caja.
      * @param nivel la cantidad de casillas a ser escondidas por caja.
      */
     public void nuevoJuego(String jugador, int limite, int nivel) {
@@ -100,7 +100,7 @@ public class ControlSudoku {
 
     /**
      * Abre un archivo que contiene un juego Sudoku.
-     * @param path La ruta o dirección del archivo.
+     * @param path La ruta o direcciÃ³n del archivo.
      */
     public void abrirJuego(String path) {
         ListaCajaSudoku nuevoModelo = null;
@@ -130,7 +130,7 @@ public class ControlSudoku {
 
     /**
      * Guarda un jugo Sudoku a un archivo.
-     * @param path La ruta o dirección del archivo.
+     * @param path La ruta o direcciÃ³n del archivo.
      */
     public void guardarJuego(String path) {
         try {
@@ -144,12 +144,12 @@ public class ControlSudoku {
         }
     }
 
-    /** Verfica que un número dado sea el único en la fila, columna o caja del Sudoku,
-     * siendo así este se sitúa en la posición dada.
-     * @param pos Un arreglo de enteros con la notación:
+    /** Verfica que un nÃºmero dado sea el Ãºnico en la fila, columna o caja del Sudoku,
+     * siendo asÃ­ este se sitÃºa en la posiciÃ³n dada.
+     * @param pos Un arreglo de enteros con la notaciÃ³n:
      * {filaCaja, columnaCaja, fila, columna}.
-     * @param num El número a ser introducido
-     * @return true si la operación fué satisfactoria.
+     * @param num El nÃºmero a ser introducido
+     * @return true si la operaciÃ³n fuÃ© satisfactoria.
      */
     private boolean esNumeroConcurrente(int[] pos, int num) {
         boolean res = false;
@@ -179,23 +179,23 @@ public class ControlSudoku {
     }
 
     /**
-     * Se usa para insertár un número en una posición dada sin intervención de
-     * una interfaz gráfica para mostrar los resultados.
-     * @param pos un arreglo que representa la posición con la notación
+     * Se usa para insertar un nÃºmero en una posiciÃ³n dada sin intervenciÃ³n de
+     * una interfaz grÃ¡fica para mostrar los resultados.
+     * @param pos un arreglo que representa la posiciÃ³n con la notaciÃ³n
      * {filaCaja, columnaCaja, fila, columna}.
-     * @param num el número a ser insertado.
+     * @param num el nÃºmero a ser insertado.
      */
     public void insertarNumeroConsola(int[] pos, int num) {
         if (esNumeroConcurrente(pos, num)) {
-            System.out.print("Se há insertado el número '" + num + "' en: ");
+            System.out.print("Se hÃ¡ insertado el nÃºmero '" + num + "' en: ");
             System.out.println(pos[0] + " " + pos[1] + " " + pos[2] + " " + pos[3]);
         }
         else {
-            System.out.println("El número está repetido");
+            System.out.println("El nÃºmero estÃ¡ repetido");
         }
 
         if (ganaste())
-            System.out.println("¡¡¡GANASTE!!!");
+            System.out.println("Â¡Â¡Â¡GANASTE!!!");
     }
 
     //>>>>>>>>>> LISTENERS  *
@@ -219,7 +219,7 @@ public class ControlSudoku {
                 nivel  = (limite*limite) / new Integer(formulario[1]);
             }
             catch(NumberFormatException nfe) {
-                vista.MensajeError("Parámetro incorrecto: '" + formulario[0] + "', Se esperaba un número");
+                vista.MensajeError("ParÃ¡metro incorrecto: '" + formulario[0] + "', Se esperaba un nÃºmero");
                 return;
             }
 
@@ -230,11 +230,11 @@ public class ControlSudoku {
                 vista.iniciar ();
             }
             catch (ArrayIndexOutOfBoundsException excp) {
-                vista.MensajeError("Parámetro incorrecto: Número cero");
+                vista.MensajeError("ParÃ¡metro incorrecto: NÃºmero cero");
                 return;
             }
             catch (NegativeArraySizeException excp) {
-                vista.MensajeError("Parámetro incorrecto: '" + limite + "', Número negativo");
+                vista.MensajeError("ParÃ¡metro incorrecto: '" + limite + "', NÃºmero negativo");
                 return;
             }
             catch (OutOfMemoryError excp) {
@@ -283,7 +283,7 @@ public class ControlSudoku {
         }
     }
 
-    /** Listener para insertar o borrar un número.*/
+    /** Listener para insertar o borrar un nÃºmero.*/
     class CasillaListener extends MouseAdapter {
         @Override
         public void mouseEntered(MouseEvent evt) {
@@ -310,7 +310,7 @@ public class ControlSudoku {
                 vista.setNumeroCasillaActiva (modelo.getNumero(pos));
             }
             else {
-                vista.MensajeError("El número está repetido");
+                vista.MensajeError("El nÃºmero estÃ¡ repetido");
             }
 
             if(ganaste()) {
@@ -323,7 +323,7 @@ public class ControlSudoku {
 
     /**
      * Listener para aumentar en un segundo el tiempo del modelo y actualizarlo en la
-     * interface gráfica del reloj.
+     * interface grÃ¡fica del reloj.
      */
     class TiempoListener implements ActionListener {
         @Override

@@ -45,7 +45,7 @@ public class CajaGUI extends JPanel {
     }
 
     /**
-     * Inicia las casillas pasando por par·metro la casilla en el modelo que le
+     * Inicia las casillas pasando por par√°metro la casilla en el modelo que le
      * corresponde y agrega el respectivo listener para interactuar con la casilla.
      * @param casillasModelo la casilla del modelo.
      * @param casillaListener Un Mouselistener.

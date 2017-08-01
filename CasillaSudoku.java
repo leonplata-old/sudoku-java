@@ -21,7 +21,7 @@ public class CasillaSudoku implements Serializable {
     }
 
     /**
-     * @return true si la casilla está bloqueada.
+     * @return true si la casilla estï¿½ bloqueada.
      */
     public boolean getEstado() {
         return bloqueado;

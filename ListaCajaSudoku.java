@@ -5,7 +5,7 @@ import java.io.Serializable;
  * el tiempo.<br />
  * <br />
  * El entero <code>pos[]</code> es usado a lo largo del proyecto como
- * representación de la posición de una casilla dentro del sudoku.<br />
+ * representaciÃ³n de la posiciÃ³n de una casilla dentro del sudoku.<br />
  *
  * <ul>
  *  <li><code>pos[0]</code>: La fila de la caja.</li>
@@ -68,8 +68,8 @@ public class ListaCajaSudoku implements Serializable {
     }
 
     /**
-     * Devuelve el límite
-     * @return El límite
+     * Devuelve el lÃ­mite
+     * @return El lÃ­mite
      */
     public int getLimite(){
         return limite;
@@ -84,10 +84,10 @@ public class ListaCajaSudoku implements Serializable {
     }
 
     /**
-     * Inserta un número en determinada posición.
-     * @param pos Un arreglo de enteros con la notación:
+     * Inserta un nÃºmero en determinada posiciÃ³n.
+     * @param pos Un arreglo de enteros con la notaciÃ³n:
      * {filaCaja, columnaCaja, fila, columna}.
-     * @param num el número a ser insertado
+     * @param num el nÃºmero a ser insertado
      */
     public void setNumero(int[] pos, int num) {
         if (num == 0) {
@@ -106,10 +106,10 @@ public class ListaCajaSudoku implements Serializable {
     }
 
     /**
-     * Devuelve el valor de la casilla en una posición dada.
-     * @param pos Un arreglo de enteros con la notación:
+     * Devuelve el valor de la casilla en una posiciÃ³n dada.
+     * @param pos Un arreglo de enteros con la notaciÃ³n:
      * {filaCaja, columnaCaja, fila, columna}.
-     * @return El entero de la casilla de la posición dada
+     * @return El entero de la casilla de la posiciÃ³n dada
      */
     public int getNumero(int pos[]) {
         return matriz[pos[0]][pos[1]].getNumero(pos[2], pos[3]);
@@ -117,10 +117,10 @@ public class ListaCajaSudoku implements Serializable {
 
     /**
       * Busca numeros repetidos en el Sudoku segun las reglas, en fila, columna y caja.
-      * @param pos Un arreglo de enteros con la notación:
+      * @param pos Un arreglo de enteros con la notaciÃ³n:
      * {filaCaja, columnaCaja, fila, columna}.
-      * @param num el número a ser buscado.
-      * @return true si el número está repetido.
+      * @param num el nÃºmero a ser buscado.
+      * @return true si el nÃºmero estÃ¡ repetido.
       */
     public boolean buscarRepetidos(int[] pos, int num) {
         if (num == 0)
@@ -150,7 +150,7 @@ public class ListaCajaSudoku implements Serializable {
 
     /**
      * Devuelve en forma de cadena de texto del estado del Sudoku.
-     * @return Una representación textual (String) del Sudoku.
+     * @return Una representaciÃ³n textual (String) del Sudoku.
      */
     public String print() {
         String res = "";
@@ -190,7 +190,7 @@ public class ListaCajaSudoku implements Serializable {
 
     /**
      * Devuelve el tiempo.
-     * @return un arreglo con la notación {horas, minutos, segundos}.
+     * @return un arreglo con la notaciÃ³n {horas, minutos, segundos}.
      */
     public int[] getTiempo() {
         int[] res = {horas, minutos, segundos};
@@ -218,9 +218,9 @@ public class ListaCajaSudoku implements Serializable {
     //>>>>>>>>>> METODOS PARA GENERAR UN JUEGO SUDOKU  *
 
     /*
-     * Genera los números de un juego Sudoku resuelto basado en una caja de muestra
-     * con números concurrentes en orden aleatorio que mediante varios métodos se lo
-     * irá mezclando e insertando en cada una de las cajas del Sudoku.
+     * Genera los nÃºmeros de un juego Sudoku resuelto basado en una caja de muestra
+     * con nÃºmeros concurrentes en orden aleatorio que mediante varios mï¿½todos se lo
+     * irÃ¡ mezclando e insertando en cada una de las cajas del Sudoku.
      */
     private void generarTablero() {
         int[]             num     = Aleatorio.listaAleatoria(limite*limite, limite*limite);
@@ -278,7 +278,7 @@ public class ListaCajaSudoku implements Serializable {
         }
     }
 
-    /* Mezcla las sub-filas de casillas de la fila de cajas indicada en el parámetro.*/
+    /* Mezcla las sub-filas de casillas de la fila de cajas indicada en el parÃ¡metro.*/
     private void mezclarFilas(int filaCaja) {
         int[]              num  = Aleatorio.listaAleatoria(limite, limite);
         CasillaSudoku [][] temp = new CasillaSudoku[limite][limite];
@@ -294,7 +294,7 @@ public class ListaCajaSudoku implements Serializable {
         }
     }
 
-    /* Mezcla las sub-columans de casillas de la columna de cajas indicada en el parámetro.*/
+    /* Mezcla las sub-columans de casillas de la columna de cajas indicada en el parÃ¡metro.*/
     private void mezclarColumnas(int columnaCaja) {
         int[]             num  = Aleatorio.listaAleatoria(limite, limite);
         CasillaSudoku[][] temp = new CasillaSudoku[limite][limite];

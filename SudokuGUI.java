@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
  */
 public class SudokuGUI extends JFrame {
 
-    /** Color de la barra de menús y otros componentes.*/
+    /** Color de la barra de menÃºs y otros componentes.*/
     public static Color COLOR_PREFERIDO = new Color(186, 217, 241);
 
     // Variables para la Barra de Menus
@@ -50,7 +50,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Permite instanciar un nuevo modelo, este método se usa cuando se desea abrir
+     * Permite instanciar un nuevo modelo, este mÃ©todo se usa cuando se desea abrir
      * un modelo desde archivo.
      * @param modelo El modelo nuevo.
      */
@@ -88,10 +88,10 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Actualiza la interface gráfica con el modelo y habilita la edición del modelo
-     * mediante la interface gráfica.
-     * Inserta las casillas del modelo en la interface gráfica, habilita el botón 'Guardar'
-     * de la barra de menús.
+     * Actualiza la interface grÃ¡fica con el modelo y habilita la ediciÃ³n del modelo
+     * mediante la interface grÃ¡fica.
+     * Inserta las casillas del modelo en la interface grÃ¡fica, habilita el botÃ³n 'Guardar'
+     * de la barra de menÃºs.
      */
     public void iniciar() {
         if (!guardar.isEnabled())
@@ -105,7 +105,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Lanza una ventana de diálogo con un mensaje de error.
+     * Lanza una ventana de diÃ¡logo con un mensaje de error.
      * @param mensaje El mensaje de error.
      */
     public void MensajeError(String mensaje) {
@@ -115,16 +115,16 @@ public class SudokuGUI extends JFrame {
 
     /**
      * Instancia un MouseListener para ser pasado como referencia en todas las
-     * casillas de la interface gráfica.
-     * @param evt El MouseListener en cuestión.
+     * casillas de la interface grÃ¡fica.
+     * @param evt El MouseListener en cuestiÃ³n.
      */
     public void addCasillaListener(MouseListener evt) {
         casillaListener = evt;
     }
 
     /**
-     * Finaliza la actualización del modelo, esto se da cuando se gana el juego.
-     * Bloquéa todas las casillas de la interface gráfica y desabilita el botón guardar.
+     * Finaliza la actualizaciÃ³n del modelo, esto se da cuando se gana el juego.
+     * Bloquea todas las casillas de la interface grÃ¡fica y desabilita el botÃ³n guardar.
      */
     public void finalizar() {
         guardar.setEnabled(false);
@@ -138,7 +138,7 @@ public class SudokuGUI extends JFrame {
 
     //>>>>>>>>>> METODOS PARA CONSTRUIR LA BARRA DE MENU  *
 
-    /* Instancia los componentes de la barra de menús.*/
+    /* Instancia los componentes de la barra de menÃºs.*/
     private void iniciarBarraMenu() {
         barraMenu   = new JMenuBar  ();
         archivoMenu = new JMenu     ("Archivo");
@@ -169,7 +169,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Nuevo Juego" del menú "Archivo".
+     * Agrega un ActionListener al item "Nuevo Juego" del menÃº "Archivo".
      * @param evt El ActionListener a ser agregado
      */
     public void addNuevoJuegoListener(ActionListener evt) {
@@ -177,7 +177,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Salir" del menú "Archivo".
+     * Agrega un ActionListener al item "Salir" del menÃº "Archivo".
      * @param evt El ActionListener a ser agregado
      */
     public void addSalirListener(ActionListener evt) {
@@ -185,7 +185,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Abrir" del menú "Archivo".
+     * Agrega un ActionListener al item "Abrir" del menÃº "Archivo".
      * @param evt El ActionListener a ser agregado
      */
     public void addAbrirListener(ActionListener evt) {
@@ -193,7 +193,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Guardar" del menú "Archivo".
+     * Agrega un ActionListener al item "Guardar" del menÃº "Archivo".
      * @param evt El ActionListener a ser agregado
      */
     public void addGuardarListener(ActionListener evt) {
@@ -201,7 +201,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Ver Reloj" del menú "Archivo".
+     * Agrega un ActionListener al item "Ver Reloj" del menÃº "Archivo".
      * @param evt El ActionListener a ser agregado
      */
     public void addVerRelojListener(ActionListener evt) {
@@ -209,7 +209,7 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Agrega un ActionListener al item "Acerca De" del menú "Ayuda".
+     * Agrega un ActionListener al item "Acerca De" del menÃº "Ayuda".
      * @param evt El ActionListener a ser agregado
      */
     public void addAcercaDeListener (ActionListener evt) {
@@ -227,9 +227,9 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Devuelve la posición de la casilla activada en forma de un arreglo de
+     * Devuelve la posiciÃ³n de la casilla activada en forma de un arreglo de
      * enteros.
-     * @return un int[] con la notación {filaCaja, columnaCaja, fila, columna}
+     * @return un int[] con la notaciÃ³n {filaCaja, columnaCaja, fila, columna}
      */
     public int[] getPosCasillaActiva() {
         return casillaActiva.getPosicion();
@@ -251,8 +251,8 @@ public class SudokuGUI extends JFrame {
     }
 
     /**
-     * Inserta un número en la casilla activada.
-     * @param num Número a insertar en la casilla activada.
+     * Inserta un nÃºmero en la casilla activada.
+     * @param num NÃºmero a insertar en la casilla activada.
      */
     public void setNumeroCasillaActiva(int num) {
         casillaActiva.setNumero(num);
