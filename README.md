@@ -4,13 +4,7 @@ This is a sudoku game made in year 2011 with Java 6 as an assignment for "Method
 
 This project was missed for a long while until a day I found it in an aged CD-ROM in conjunction with other old projects. It was worked mainly in spanish language and it uses a very basic algorithm to generate sudoku puzzles so after a while is very easy to understand the trick to solve all puzzles.
 
-Below starts the original README.
-
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+Below starts the original README (in spanish).
 
 PROJECT TITLE: Sudoku
 
